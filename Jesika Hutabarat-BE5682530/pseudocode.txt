@@ -1,0 +1,23 @@
+Start
+READ and WRITE name_book AS STRING
+READ and WRITE id_book AS INTEGER
+
+WHILE (menu != 2)
+    PRINT "1. Borrow Menu"
+    PRINT "2. Return Menu"
+
+    IF (menu !=1)
+        INPUT "name_book"
+        SEARCH "name_book"
+        CHOOSE "name_book"
+        CLICK BORROW id_book
+    ELSE IF (menu == 2)
+        INPUT "id_book"
+        CHECK "id_book"
+    END IF
+
+    INPUT "Confirmation (y/n)", choose
+    IF choose == "n" THEN 
+        EXIT WHILE
+    END IF
+END WHILE
